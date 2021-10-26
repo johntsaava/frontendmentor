@@ -1,0 +1,38 @@
+@use "../abstracts";
+
+.order-summary-modal {
+  margin: auto;
+  width: 100%;
+  max-width: 45rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.order-summary {
+  background-color: abstracts.$color-paper;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 2rem 3.5rem rgba(abstracts.$color-primary, 0.15);
+
+  &__header {
+    height: 22rem;
+
+    @media only screen and (max-width: 37.5em) {
+      height: 16rem;
+    }
+  }
+
+  &__picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 3.2rem 4.8rem;
+    text-align: center;
+  }
+}

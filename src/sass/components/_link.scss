@@ -1,0 +1,21 @@
+@use "../abstracts";
+
+.link {
+  &,
+  &:link,
+  &:visited {
+    color: abstracts.$color-primary;
+    font-weight: 900;
+    font-size: 1.4rem;
+    transition: color 150ms;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: lighten(abstracts.$color-primary, 15%);
+  }
+}

@@ -1,0 +1,39 @@
+@use "../abstracts";
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 1.5rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+
+  &--primary {
+    color: abstracts.$color-contrast-text;
+    background-color: abstracts.$color-primary;
+    box-shadow: 0 2rem 2rem rgba(abstracts.$color-primary, 0.2);
+    border-radius: 1.2rem;
+    transition-property: transform, background-color, box-shadow;
+    transition-duration: 150ms;
+
+    &:hover {
+      background-color: lighten(abstracts.$color-primary, 15%);
+      transform: translateY(-0.2rem);
+      box-shadow: 0 2rem 3rem rgba(abstracts.$color-primary, 0.15);
+    }
+
+    &:active,
+    &:focus {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &--secondary {
+    color: abstracts.$color-secondary;
+    transition: color 150ms;
+
+    &:hover {
+      color: abstracts.$color-secondary-dark;
+    }
+  }
+}
