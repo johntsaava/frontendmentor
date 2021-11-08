@@ -1,6 +1,6 @@
 export const App = () => {
   return (
-    <main className="App">
+    <main>
       <h1 className="text-xl">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis,
         dolorum.
