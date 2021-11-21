@@ -18,10 +18,10 @@ export const ArticleTitle = ({ children, className = "", ...props }) => (
   </h2>
 );
 
-export const ArticleContent = ({ children, className = "", ...props }) => (
+export const ArticleDescription = ({ children, className = "", ...props }) => (
   <p
     {...props}
-    className={`mt-5 font-body text-sm md:text-base text-center md:text-left text-grayish-blue-700 ${className}`}
+    className={`mt-5 text-sm md:text-base text-center md:text-left text-grayish-blue-700 ${className}`}
   >
     {children}
   </p>
