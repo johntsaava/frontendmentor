@@ -12,6 +12,12 @@ import {
   CardTitle,
 } from "./components/Card";
 import { Picture } from "./components/Picture";
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAvatar,
+  TestimonialDescription,
+} from "./components/Testimonial";
 
 import logo_url from "./images/logo.svg";
 import hamburger_url from "./images/icon-hamburger.svg";
@@ -24,6 +30,9 @@ import desktop_graphic_design_url from "./images/desktop/image-graphic-design.jp
 import mobile_graphic_design_url from "./images/mobile/image-graphic-design.jpg";
 import desktop_photography_url from "./images/desktop/image-photography.jpg";
 import mobile_photography_url from "./images/mobile/image-photography.jpg";
+import emily_url from "./images/image-emily.jpg";
+import jennie_url from "./images/image-jennie.jpg";
+import thomas_url from "./images/image-thomas.jpg";
 
 export const App = () => {
   return (
@@ -128,7 +137,43 @@ export const App = () => {
         </CardContent>
       </Card>
 
-      <section className="col-span-full">Section</section>
+      <section className="col-span-full">
+        <h3 className="font-display tracking-widest uppercase text-xs md:text-xl text-center text-grayish-blue-400 mt-12 md:mt-36">
+          Client testimonials
+        </h3>
+
+        <div className="flex flex-col gap-12 mt-12 md:mt-20 md:flex-row justify-center items-center md:items-stretch px-7">
+          <Testimonial>
+            <TestimonialAvatar src={emily_url} alt="Emily R." />
+            <TestimonialDescription>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </TestimonialDescription>
+            <TestimonialAuthor name="Emily R." position="Marketing Director" />
+          </Testimonial>
+
+          <Testimonial>
+            <TestimonialAvatar src={thomas_url} alt="Thomas S." />
+            <TestimonialDescription>
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </TestimonialDescription>
+            <TestimonialAuthor
+              name="Thomas S."
+              position="Chief Operating Officer"
+            />
+          </Testimonial>
+
+          <Testimonial>
+            <TestimonialAvatar src={jennie_url} alt="Jennie F." />
+            <TestimonialDescription>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </TestimonialDescription>
+            <TestimonialAuthor name="Jennie F." position="Business Owner" />
+          </Testimonial>
+        </div>
+      </section>
       <figure className="">Figure</figure>
       <figure className="">Figure</figure>
       <figure className="">Figure</figure>
