@@ -18,8 +18,8 @@ import {
   TestimonialAvatar,
   TestimonialDescription,
 } from "./components/Testimonial";
+import { Logo } from "./components/Logo";
 
-import logo_url from "./images/logo.svg";
 import hamburger_url from "./images/icon-hamburger.svg";
 import arrow_down_url from "./images/icon-arrow-down.svg";
 import desktop_transform_url from "./images/desktop/image-transform.jpg";
@@ -33,13 +33,26 @@ import mobile_photography_url from "./images/mobile/image-photography.jpg";
 import emily_url from "./images/image-emily.jpg";
 import jennie_url from "./images/image-jennie.jpg";
 import thomas_url from "./images/image-thomas.jpg";
+import desktop_gallery_milkbottles_url from "./images/desktop/image-gallery-milkbottles.jpg";
+import mobile_gallery_milkbottles_url from "./images/mobile/image-gallery-milkbottles.jpg";
+import desktop_gallery_orange_url from "./images/desktop/image-gallery-orange.jpg";
+import mobile_gallery_orange_url from "./images/mobile/image-gallery-orange.jpg";
+import desktop_gallery_cone_url from "./images/desktop/image-gallery-cone.jpg";
+import mobile_gallery_cone_url from "./images/mobile/image-gallery-cone.jpg";
+import desktop_gallery_sugarcubes_url from "./images/desktop/image-gallery-sugarcubes.jpg";
+import mobile_gallery_sugarcubes_url from "./images/mobile/image-gallery-sugar-cubes.jpg";
+import facebook_url from "./images/icon-facebook.svg";
+import instagram_url from "./images/icon-instagram.svg";
+import twitter_url from "./images/icon-twitter.svg";
+import pinterest_url from "./images/icon-pinterest.svg";
 
 export const App = () => {
   return (
-    <main className="grid grid-cols-1 sm:grid-cols-2">
+    <main className="grid grid-cols-2 sm:grid-cols-4">
       <section className="col-span-full flex flex-col h-[80vh] px-4 md:px-10 py-6 md:py-10 bg-header bg-cover md:bg-contain bg-no-repeat bg-bottom bg-cyan-400">
         <header className="flex justify-between">
-          <img src={logo_url} alt="sunnyside" className="w-24 md:w-44" />
+          <Logo className="w-24 md:w-44" />
+
           <button className="md:hidden">
             <img src={hamburger_url} alt="Menu" className="w-5" />
           </button>
@@ -54,7 +67,7 @@ export const App = () => {
         />
       </section>
 
-      <section className="px-6 py-12 flex items-center justify-center">
+      <section className="col-span-2 px-6 py-12 flex items-center justify-center">
         <Article>
           <ArticleTitle>Transform your brand</ArticleTitle>
           <ArticleDescription>
@@ -70,7 +83,7 @@ export const App = () => {
         </Article>
       </section>
 
-      <figure>
+      <figure className="col-span-2">
         <Picture
           desktop={desktop_transform_url}
           mobile={mobile_transform_url}
@@ -79,7 +92,7 @@ export const App = () => {
         />
       </figure>
 
-      <figure className="">
+      <figure className="col-span-2">
         <Picture
           desktop={desktop_stand_out_url}
           mobile={mobile_stand_out_url}
@@ -88,7 +101,7 @@ export const App = () => {
         />
       </figure>
 
-      <section className="px-6 py-12 flex items-center justify-center">
+      <section className="col-span-2 px-6 py-12 flex items-center justify-center">
         <Article>
           <ArticleTitle>Stand out to the right audience</ArticleTitle>
           <ArticleDescription>
@@ -104,7 +117,7 @@ export const App = () => {
         </Article>
       </section>
 
-      <Card className="h-[70vh]">
+      <Card className="col-span-2 h-[70vh]">
         <Picture
           desktop={desktop_graphic_design_url}
           mobile={mobile_graphic_design_url}
@@ -121,7 +134,7 @@ export const App = () => {
         </CardContent>
       </Card>
 
-      <Card className="h-[70vh]">
+      <Card className="col-span-2 h-[70vh]">
         <Picture
           desktop={desktop_photography_url}
           mobile={mobile_photography_url}
@@ -137,8 +150,8 @@ export const App = () => {
         </CardContent>
       </Card>
 
-      <section className="col-span-full">
-        <h3 className="font-display tracking-widest uppercase text-xs md:text-xl text-center text-grayish-blue-400 mt-12 md:mt-36">
+      <section className="col-span-full my-12 md:my-36">
+        <h3 className="font-display tracking-widest uppercase text-xs md:text-xl text-center text-grayish-blue-400">
           Client testimonials
         </h3>
 
@@ -174,11 +187,71 @@ export const App = () => {
           </Testimonial>
         </div>
       </section>
-      <figure className="">Figure</figure>
-      <figure className="">Figure</figure>
-      <figure className="">Figure</figure>
-      <figure className="">Figure</figure>
-      <footer className="col-span-full">Section</footer>
+
+      <figure className="aspect-w-1 aspect-h  md:aspect-w-4 md:aspect-h-5">
+        <Picture
+          desktop={desktop_gallery_milkbottles_url}
+          mobile={mobile_gallery_milkbottles_url}
+          alt="Milkbottles"
+          className="w-full h-full object-cover"
+        />
+      </figure>
+
+      <figure className="aspect-w-1 aspect-h-1">
+        <Picture
+          desktop={desktop_gallery_orange_url}
+          mobile={mobile_gallery_orange_url}
+          alt="Orange"
+          className="w-full h-full object-cover"
+        />
+      </figure>
+
+      <figure className="aspect-w-1 aspect-h-1">
+        <Picture
+          desktop={desktop_gallery_cone_url}
+          mobile={mobile_gallery_cone_url}
+          alt="Cone"
+          className="w-full h-full object-cover"
+        />
+      </figure>
+
+      <figure className="aspect-w-1 aspect-h-1">
+        <Picture
+          desktop={desktop_gallery_sugarcubes_url}
+          mobile={mobile_gallery_sugarcubes_url}
+          alt="Sugarcubes"
+          className="w-full h-full object-cover"
+        />
+      </figure>
+
+      <footer className="col-span-full text-green-600 bg-green-200 flex flex-col items-center py-12 md:py-20 px-8">
+        <Logo className="w-32 md:w-44  fill-current" />
+        <nav className="mt-8 md:mt-10 flex gap-8 text-sm md:text-base text-green-600/80">
+          <a href="#" className="hover:text-white transition-colors">
+            About
+          </a>
+          <a href="#" className="hover:text-white transition-colors">
+            Services
+          </a>
+          <a href="#" className="hover:text-white transition-colors">
+            Projects
+          </a>
+        </nav>
+        <div className="flex mt-16 gap-5">
+          <a href="#">
+            <img src={facebook_url} alt="facebook" />
+          </a>
+          <a href="#">
+            <img src={instagram_url} alt="instagram" />
+          </a>
+          <a href="#">
+            <img src={twitter_url} alt="twitter" />
+          </a>
+          <a href="#">
+            <img src={pinterest_url} alt="pinterest" />
+          </a>
+        </div>
+      </footer>
     </main>
   );
 };
